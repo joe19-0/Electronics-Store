@@ -1,6 +1,3 @@
-:root {
-
-}
 * {
     margin: 0;
     padding: 0;
@@ -35,10 +32,11 @@ header .text {
 }
 header nav {
     width: 100%;
+    padding-right: 20px;
 }
 header nav ul {
     display: flex;
-    width: 80%;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     list-style: none;
@@ -48,7 +46,7 @@ header nav ul li a {
     color: black;
     font-weight: bold;
     position: relative;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     text-transform: uppercase;
 }
 header nav ul li a::before {
@@ -73,6 +71,7 @@ section.landpage {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    min-height: 100vh;
     background-image: url(https://i.pinimg.com/1200x/ea/2c/68/ea2c68cfce2c02078e35de9fddcfda10.jpg);
 }
 section.landpage .text{
@@ -83,6 +82,7 @@ section.landpage .text{
     justify-content: space-between;
     height: 30%;
     align-items: center;
+    margin-bottom: 20px;
 }
 section.landpage h2 {
     font-size: 2rem;
@@ -135,7 +135,7 @@ section.landpage .btn:hover a {
     color: red;
 }
 section.menu {
-    height: 100vh;
+    min-height: 100vh;
     background: linear-gradient(135deg, #d6cbcb, #111827, #c9bdbd);
     padding: 20px;
 }
@@ -179,6 +179,7 @@ section.menu .content .text {
     text-transform: capitalize;
     color: black;
     letter-spacing: 3px;
+    text-align: center;
 }
 section.menu .content .box:hover {
     transform: translate(-5px, 10px) scale(1.1, 1.1);
@@ -199,6 +200,7 @@ section.electronics .bestseller .headtext h2 {
     letter-spacing: 2px;
 }
 section.electronics .bestseller .content {
+    padding: 20px;
     display: flex;
     flex-wrap: nowrap;
     overflow-x: auto;
@@ -265,13 +267,13 @@ section.grid {
     padding: 20px;
     display: grid;
     justify-content: space-around;
+    align-items: center;
     grid-template-columns: 1fr 1fr;
     background: linear-gradient(135deg, #111827, #c9bdbd, #d6cbcb);
 }
 section.grid .left .content, section.grid .right .content {
     margin: 0 10px;
 }
-
 section.grid .left .content .box {
     display: grid;
     justify-content: center;
@@ -329,9 +331,9 @@ footer.contactsec {
     padding: 10px;
     background: linear-gradient(135deg, #1b1b1b, #0c0c0c, #110010);
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
     color: white;
-    height: 50vh;
+    min-height: 50vh;
 }
 footer.contactsec .text {
     font-size: 1.5rem;
@@ -391,6 +393,21 @@ footer.contactsec .about div:hover {
     color: red;
     transform: matrix(5px, 5px);
 }
+footer.contactsec .text {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+footer.contactsec .image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s
+}
+footer.contactsec .image img:hover {
+    padding: 5px;
+}
 footer.contactsec .title {
     display: grid;
     justify-content: flex-end;
@@ -400,7 +417,280 @@ footer.contactsec .title {
     font-size: 1.2rem;
     font-weight: 700;
 }
-
 a {
     text-decoration: none;
+}
+
+@media (max-width: 424px) {
+    header .logo .image img {
+        width: 40px;
+        height: 40px;
+    }
+    header .logo .text h1 {
+        font-size: 0.8rem;
+    }
+    header nav ul li a {
+        font-size: 0.5rem;
+    }
+    section.landpage .text h2 {
+        font-size: 1rem;
+    }
+    section.landpage .text p {
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+        width: 80%;
+        align-self: flex-start;
+    }
+    section.landpage .btn button a {
+        font-size: 0.9rem;
+    }
+    section.menu p {
+        font-size: 1.2rem;
+    }
+    section.menu .content {
+        flex-wrap: wrap;
+    }
+    section.menu .content a {
+        margin: 10px 0;
+        padding: 30px;
+    }
+    section.menu .content .box:hover {
+        transform: translate(-5px, 10px) scale(1.05, 1.05);
+    }
+    section.electronics .bestseller .headtext h2 {
+        font-size: 1.2rem;
+    }
+    section.grid .box {
+        width: 100%;
+        padding: 0 5px;
+    }
+    section.grid .right .headtext h2 {
+        font-size: 0.8rem;
+    }
+    section.grid .left .headtext h2 {
+        font-size: 1rem;
+    }
+    section.grid .left .content .box .image img,
+    section.grid .right .content .box .image img {
+        width: 100px;
+        height: 100px;
+    }
+    section.grid .left .content .box h3 {
+        font-size: 1rem;
+    }
+    section.grid .right .content .box .text h3 {
+        font-size: 0.7rem;
+    }
+    section.grid .right .content .box p,
+    section.grid .left .content .box p {
+        font-size: 0.5rem;
+    }
+    footer.contactsec {
+        display: block;
+    }
+    footer.contactsec .text {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    footer.contactsec .middle p {
+        font-size: 1rem;
+    }
+    footer.contactsec .about div {
+        margin: 10px 0;
+    }
+    footer.contactsec .text {
+        flex-direction: row;
+        align-items: center;
+    }
+    footer.contactsec .text .image img {
+        width: 30px;
+        height: 30px;
+    }
+    footer.contactsec .title {
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media (min-width: 425px) and (max-width: 767px) {
+    header .logo .image img {
+        width: 40px;
+        height: 40px;
+    }
+    header .logo .text h1 {
+        font-size: 0.8rem;
+    }
+    header nav ul li a {
+        font-size: 0.5rem;
+    }
+    section.landpage .text h2 {
+        font-size: 1rem;
+    }
+    section.landpage .text p {
+        font-size: 0.8rem;
+        letter-spacing: 1px;
+        width: 80%;
+        align-self: flex-start;
+    }
+    section.landpage .btn button a {
+        font-size: 0.9rem;
+    }
+    section.menu p {
+        font-size: 1.5rem;
+    }
+    section.menu .content {
+        flex-wrap: wrap;
+    }
+    section.menu .content a {
+        margin: 10px 0;
+        padding: 30px;
+    }
+    section.menu .content .box:hover {
+        transform: translate(-5px, 10px) scale(1.05, 1.05);
+    }
+    section.electronics .bestseller .headtext h2 {
+        font-size: 1.5rem;
+    }
+    section.grid .box {
+        width: 100%;
+        padding: 0 5px;
+    }
+    section.grid .right .headtext h2 {
+        font-size: 1rem;
+    }
+    section.grid .left .headtext h2 {
+        font-size: 1rem;
+    }
+    section.grid .left .content .box .image img,
+    section.grid .right .content .box .image img {
+        width: 120px;
+        height: 120px;
+    }
+    section.grid .left .content .box h3 {
+        font-size: 1rem;
+    }
+    section.grid .right .content .box .text h3 {
+        font-size: 0.7rem;
+    }
+    section.grid .right .content .box p,
+    section.grid .left .content .box p {
+        font-size: 0.7rem;
+    }
+    footer.contactsec {
+        display: block;
+    }
+    footer.contactsec .text {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    footer.contactsec .middle p {
+        font-size: 1rem;
+    }
+    footer.contactsec .about div {
+        margin: 10px 0;
+    }
+    footer.contactsec .text {
+        flex-direction: row;
+        align-items: center;
+    }
+    footer.contactsec .text .image img {
+        width: 30px;
+        height: 30px;
+    }
+    footer.contactsec .title {
+        display: flex;
+        flex-direction: row;
+    }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+    header .logo .image img {
+        width: 50px;
+        height: 50px;
+    }
+    header .logo .text h1 {
+        font-size: 1rem;
+    }
+    header nav ul li a {
+        font-size: 1rem;
+    }
+    section.landpage .text h2 {
+        font-size: 1.2rem;
+    }
+    section.landpage .text p {
+        font-size: 1rem;
+        letter-spacing: 1px;
+        width: 80%;
+        align-self: center;
+    }
+    section.landpage .btn button a {
+        font-size: 0.9rem;
+    }
+    section.menu p {
+        font-size: 1.5rem;
+    }
+    section.menu .content {
+        flex-wrap: wrap;
+    }
+    section.menu .content a {
+        margin: 10px 0;
+        padding: 30px;
+    }
+    section.menu .content .box:hover {
+        transform: translate(-5px, 10px) scale(1.05, 1.05);
+    }
+    section.electronics .bestseller .headtext h2 {
+        font-size: 1.5rem;
+    }
+    section.grid .box {
+        width: 100%;
+        padding: 0 5px;
+    }
+    section.grid .right .headtext h2 {
+        font-size: 1rem;
+    }
+    section.grid .left .headtext h2 {
+        font-size: 1rem;
+    }
+    section.grid .left .content .box .image img,
+    section.grid .right .content .box .image img {
+        width: 150px;
+        height: 150px;
+    }
+    section.grid .left .content .box h3 {
+        font-size: 1.2rem;
+    }
+    section.grid .right .content .box .text h3 {
+        font-size: 1rem;
+    }
+    section.grid .right .content .box p,
+    section.grid .left .content .box p {
+        font-size: 0.9rem;
+    }
+    footer.contactsec {
+        display: block;
+    }
+    footer.contactsec .text {
+        font-size: 1.2rem;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    footer.contactsec .middle p {
+        font-size: 1.2rem;
+    }
+    footer.contactsec .about div {
+        margin: 10px 0;
+    }
+    footer.contactsec .text {
+        flex-direction: row;
+        align-items: center;
+    }
+    footer.contactsec .text .image img {
+        width: 40px;
+        height: 40px;
+    }
+    footer.contactsec .title {
+        display: flex;
+        flex-direction: row;
+    }
 }
