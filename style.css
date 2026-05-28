@@ -183,6 +183,217 @@ section.menu .content .text {
 section.menu .content .box:hover {
     transform: translate(-5px, 10px) scale(1.1, 1.1);
 }
+section.electronics {
+    background: linear-gradient(135deg, #d6cbcb, rgb(66, 255, 94), #d6cbcb);
+}
+section.electronics .bestseller .headtext {
+    padding: 20px;
+    border-bottom: black 2px solid;
+    background-color: rgba(255, 255, 255, 0.349);
+}
+section.electronics .bestseller .headtext h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+section.electronics .bestseller .content {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 20px;
+    text-align: center;
+    padding: 10px;
+    border: 2px black solid;
+}
+section.electronics .bestseller .content .box {
+    padding: 20px;
+    width: fit-content;
+    background-color: rgba(255, 255, 255, 0.349);
+}
+section.electronics .bestseller .content .image {
+    border: black 3px solid;
+    border-radius: 20px;
+    padding: 10px;
+}
+section.electronics .bestseller .content .image img {
+    width: 200px;
+    height: 200px;
+}
+section.electronics .bestseller .content .text {
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+}
+section.electronics .bestseller .content .text h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 5px;
+    letter-spacing: 2px;
+}
+section.electronics .bestseller .content .text p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+section.electronics .bestseller .content .text p span {
+    font-size: 1rem;
+    margin-top: 2px;
+    font-weight: 600;
+}
+section.electronics .bestseller .content .btn {
+    width: fit-content;
+    margin: 0 auto;
+}
+section.electronics .bestseller .content .btn button {
+    padding: 5px 3vw;
+    border: black 2px solid;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+section.electronics .bestseller .content .btn button:hover {
+    padding: 5px 8vw;
+    color: red;
+}
+section.grid {
+    padding: 20px;
+    display: grid;
+    justify-content: space-around;
+    grid-template-columns: 1fr 1fr;
+    background: linear-gradient(135deg, #111827, #c9bdbd, #d6cbcb);
+}
+section.grid .left .content, section.grid .right .content {
+    margin: 0 10px;
+}
+
+section.grid .left .content .box {
+    display: grid;
+    justify-content: center;
+    margin: 20px 0;
+    text-align: center;
+}
+section.grid .right h2, .left h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: 2px black solid;
+    margin: 0 5px;
+    padding: 5px 0;
+}
+section.grid .right .content .box {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    background-color: #d6cbcb42;
+    margin: 20px 0;
+}
+section.grid .left .content .box {
+    background-color: #d6cbcb42;
+}
+section.grid .content .box .text {
+    color: black;
+    margin: 5px 0;
+}
+section.grid .content .box .text h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+section.grid .content .box .text p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    margin: 5px 0;
+}
+section.grid .content .box .text p span {
+    font-weight: 600;
+    margin-top: 10px;
+}
+footer.contactsec {
+    padding: 10px;
+    background: linear-gradient(135deg, #1b1b1b, #0c0c0c, #110010);
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    color: white;
+    height: 50vh;
+}
+footer.contactsec .text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+footer.contactsec .middle {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+}
+footer.contactsec .middle p {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+footer.contactsec .middle .btn button {
+    padding: 5px 3vw;
+    border: solid 2px black;
+    border-radius: 20px;
+}
+footer.contactsec .middle .btn button a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    text-transform: capitalize;
+    font-weight: 500;
+    transition: 0.3s;
+    color: black;
+}
+footer.contactsec .middle .btn button a:hover {
+    padding: 5px 5vw;
+    color: red;
+}
+footer.contactsec .about {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+footer.contactsec .about div {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.288);
+    width: 50%;
+    padding: 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.3s;
+    font-weight: 700;
+}
+footer.contactsec .about div:hover {
+    color: red;
+    transform: matrix(5px, 5px);
+}
+footer.contactsec .title {
+    display: grid;
+    justify-content: flex-end;
+    align-items: center;
+    line-height: 25px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
 a {
     text-decoration: none;
 }
