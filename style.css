@@ -295,6 +295,13 @@ section.grid .right .content .box {
     background-color: #d6cbcb42;
     margin: 20px 0;
 }
+
+section.grid .content .box .image {
+    transition: 0.3s;
+}
+section.grid .content .box .image:hover {
+    transform: scale(1.1, 1.1)
+}
 section.grid .left .content .box {
     background-color: #d6cbcb42;
 }
